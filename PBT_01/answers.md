@@ -57,15 +57,21 @@
 -Khi sử dụng toàn thẻ div như vậy không đúng ngữ nghĩa làm cho gg khó chia ra được mức độ ưu tiên của từng mục dẫn đến bị gg đánh giá seo thấp.
 
 -Các lỗi sematic hiện có:
-
+```text
 div.header thay vì sử dụng thẻ header.
+
 div.menu thay vì sử dụng thẻ nav.
 
 <div><a href="">.... thay vì sử dụng thẻ li để tạo Danh sách dẫn tới đường liên kết.  
+
 div.main thay vì sử dụng thẻ main.  
+
 div.product thay vì sử dụng thẻ article  
+
 div.title thay vì sử dụng thẻ h1,h2...  
+
 div.price thay vì p.price.  
+
 div.footer thay vì thẻ footer.
 
 -Sau khi sửa lại code:
@@ -102,11 +108,13 @@ div.footer thay vì thẻ footer.
 <div>Hộp 3</div>
 ```
 
+```text
 Hộp 1
 Text A Text B
 Hộp 2
 Text C Text D (Text D in đậm)
 Hộp 3
+
 
 - Hộp 1 nằm trong thẻ div là một block -> chiếm hết 1 dòng.
 - Text A Text B trong thẻ span là inline-> Chiếm nội dung-> Nằm cùng 1 dòng.
@@ -117,7 +125,7 @@ Hộp 3
 ---
 
 # Câu A4:
-
+```text
 thẻ thead là phần tiêu đề cột của bảng.
 thẻ tbody là nội dung chính của bảng.
 thẻ tfoot là phần tổng kết của bảng.
