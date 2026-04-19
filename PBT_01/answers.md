@@ -26,10 +26,9 @@
 
  9 Cuối cùng, nội dung trang web được hiển thị lên màn hình, quá trình này.
 
--Nguồn:01_introduction_html_universe.md
-
 2. Ảnh lưu trong screenshots/screanshot.
 
+-Nguồn:01_introduction_html_universe.md
 ---
 
 # Câu A2:Semantic HTML
@@ -73,6 +72,7 @@ div.title thay vì sử dụng thẻ h1,h2...
 div.price thay vì p.price.  
 
 div.footer thay vì thẻ footer.
+```
 
 -Sau khi sửa lại code:
 
@@ -95,6 +95,7 @@ div.footer thay vì thẻ footer.
 </main>
 <footer class="footer">© 2026 ShopTLU</footer>
 ```
+-Nguồn:04_visible_part_html.md
 
 # Câu A3:Block vs Inline
 
@@ -114,7 +115,7 @@ Text A Text B
 Hộp 2
 Text C Text D (Text D in đậm)
 Hộp 3
-
+```
 
 - Hộp 1 nằm trong thẻ div là một block -> chiếm hết 1 dòng.
 - Text A Text B trong thẻ span là inline-> Chiếm nội dung-> Nằm cùng 1 dòng.
@@ -123,6 +124,8 @@ Hộp 3
 - Hộp 3 nằm trong thẻ div là một block -> Chiếm hết 1 dòng.
 
 ---
+
+-Nguồn:04_visible_part_html.md
 
 # Câu A4:
 ```text
@@ -141,3 +144,6 @@ Bảng biểu thiếu linh hoạt: Khi dùng bảng với chiều rộng cố đ
 Bảng biểu gây hại cho SEO: Nhiều lập trình viên đặt thanh điều hướng ở bên trái và nội dung ở bên phải. Nếu dùng bảng để dàn trang, công cụ tìm kiếm có thể phải xử lý nội dung theo thứ tự không tối ưu, khiến cấu trúc trang kém rõ ràng và ảnh hưởng tiêu cực đến SEO.
 
 Bảng biểu không phải lúc nào cũng in tốt: Khi in một bố cục dùng bảng, máy in có thể tự điều chỉnh giao diện vì chiều rộng bảng quá lớn. Kết quả là nội dung có thể bị cắt bớt hoặc đẩy sang trang sau, gây rối và khó đọc.
+```
+
+-Nguồn:05_tables_hyperlinks.md
