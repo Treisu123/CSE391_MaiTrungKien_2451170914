@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset class="fieldset1">
+            <legend>Thông in cá nhân</legend>
+            <label for="Fullname">Họ tên:</label>  
+            <input type="text" class="Fullname" id="Fullname" minlength="2" maxlength="50" required value="" placeholder="VD:Nguyễn Văn A">
+            
+            <label for="Email">Email:</label>
+            <input type="email" class="Email" id="Email" required placeholder="VD:Exampe@gmail.com">
+            
+            <label for="Phonenumber">Số điện thoại</label>
+            <input type="tel" class="Phonenumber" id="Phonenumber" pattern="[0-9]{10}" placeholder="VD:0596725455">
+            
+            <label for="dob">Ngày sinh:</label>
+            <input type="date" class="dob" id="dob" max="2026-04-22" placeholder="25/04/2005">
+        </fieldset>
+
+        <fieldset class="fieldset2">
+            <legend>Tài khoản</legend>
+            
+            <label for="Username">Tên đăng nhập:</label>
+            <input type="text"  id="Username" pattern="^[A-Za-z0-9_]{3,20}$" required placeholder="Example123">
+            
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Ít nhất 8 ký tự, yêu cầu ít nhất 1 chữ hoa + 1 số" placeholder="VD:Kienlc65">
+            
+            <label for="confirm_password">Xác nhận mật khẩu:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Ít nhất 8 ký tự, yêu cầu ít nhất 1 chữ hoa + 1 số" placeholder="VD:Kienlc65">
+        </fieldset>
+
+        <fieldset class="fieldset3">
+            <legend>Thông tin giao hàng</legend>
+
+            <label for="City">Thành phố:</label>
+            <select name="City" id="City" required>
+                <option value="">-- Chọn thành phố --</option>
+                <option value="ha-noi">Hà Nội</option>
+                <option value="lao-cai">Lào Cai</option>
+                <option value="bac-giang">Bắc Giang</option>
+                <option value="tp-hcm">TP. Hồ Chí Minh</option>
+                <option value="hai-phong">Hải Phòng</option>
+            </select>
+            
+            <label for="district">Quận/Huyện:</label>
+            <select name="district" id="district" required>
+                <option value="">-- Chọn Quận/Huyện --</option>
+                <option value="van-ban">Văn Bàn</option>
+                <option value="tp-laocai">TP. Lào Cai</option>
+            </select>
+
+            <label for="address-detail">Địa chỉ chi tiết:</label>
+            <textarea name="address-detail" id="address-detail" rows="3" placeholder="VD: Xã Khánh Yên - Huyện Văn Bàn - Tỉnh Lào Cai"></textarea>
+            
+            <label for="gender">Giới tính:</label>
+            <input type="radio" name="gender" id="gender-male"> 
+            <label for="gender-male">Nam</label>
+
+            <input type="radio" name="gender" id="gender-female"> 
+            <label for="gender-female">Nữ</label>
+
+            <input type="radio" name="gender" id="gender-other"> 
+            <label for="gender-other">Khác</label>
+        </fieldset>
+
+        <div class="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">Tôi đồng ý với điều khoản sử dụng</label>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
