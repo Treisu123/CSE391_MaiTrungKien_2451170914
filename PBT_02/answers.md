@@ -93,6 +93,8 @@ Câu C1:
     <input type="submit" value="Gửi">
 </form>
 ```
+
+```text
 -Lỗi 1: Dòng 75 - Input "Tên" không có <label for=""-> Vi phạm accessibility.
 Sửa: <label for="name">Tên:</label> <input type="text" id="name" name="name" required>.
 
@@ -122,6 +124,7 @@ Sửa: <button type="submit">Gửi</button>.
 
 -Lỗi 10: Dòng 74 - Input không có thuộc tính action/methob-> vi phạm best practice.
 Sửa: <form action="/register" method="post">.
+```
 
 Câu C2: Thiết kế chiến lược Validation
 ```html
@@ -144,6 +147,7 @@ Câu C2: Thiết kế chiến lược Validation
 </form>
 ```
 Trả lời câu hỏi:
+```text
 1.Viết pattern regex cho CMND/CCCD và Số tài khoản.
 Pattern của CMND/CCCD: pattern="[0-9]{12}"
 pattern của Số tài khoản: pattern="[0-9]{10,15}"
@@ -158,3 +162,4 @@ pattern của Số tài khoản: pattern="[0-9]{10,15}"
 4.Nêu 2 rủi ro bảo mật nếu chỉ validate trên Frontend mà không validate Backend
 - SQL Injection.
 - XSS (Cross-Site Scripting).
+```
