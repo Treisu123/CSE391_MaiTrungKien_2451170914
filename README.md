@@ -3,6 +3,8 @@ PBT-01
 -19/4/2026:Hoàn thiện Phần A(Từ A1-A4); Hoàn Thiện Phần B(B1-B4).
 -20/4/2026:Hoàn thiện phần C1:Thiết kế cấu trúc.
 -22/4/2026:Hoàn thành phần C2:So sánh và tranh luận.
+
+PBT-02
 -22/4/2026:Hoàn thành A1:Input Types.
 -22/4/2026:Hoàn thành A2: Validation Attributes.
 -22/4/2026:Hoàn thành A3: Accessibility.
@@ -12,3 +14,4 @@ PBT-01
 -22/4/2026:Hoàn thành B2:Trang Multimedia
 -22/4/2026:Hoàn thành B3:Form Đặt hàng hoàn chỉnh.
 -25/4/2026:Hoàn thành C1:Thiết kế chiến lược Validation.
+-25/4/2026:Hoàn thành C2:
