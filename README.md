@@ -13,5 +13,5 @@ PBT-02
 -22/4/2026:Hoàn thành B1:Form Đăng ký Tài khoản.
 -22/4/2026:Hoàn thành B2:Trang Multimedia
 -22/4/2026:Hoàn thành B3:Form Đặt hàng hoàn chỉnh.
--25/4/2026:Hoàn thành C1:Thiết kế chiến lược Validation.
--25/4/2026:Hoàn thành C2:
+-25/4/2026:Hoàn thành C1:Fix bug.
+-25/4/2026:Hoàn thành C2:Thiết kế chiến lược Validation
