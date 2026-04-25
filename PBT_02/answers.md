@@ -68,3 +68,93 @@ Câu A5:
 
 Câu B1:Form Đăng ký Tài khoản
 -HTML chỉ kiểm tra được chính field của nó. Việc so sánh password phụ thuộc vào người nhập đây là logic động nên không thể giải quyết bằng html mà phải dùng đến javascript.
+
+Câu C1:
+```html
+<form>
+    Tên: <input type="text">
+    
+    <input type="email" placeholder="Email của bạn">
+    
+    <input type="password" placeholder="Mật khẩu">
+    <input type="password" placeholder="Nhập lại mật khẩu">
+    
+    Phone: <input type="text" value="0901234567">
+    
+    <select>
+        <option>Hà Nội</option>
+        <option>TP.HCM</option>
+    </select>
+    
+    <label>
+        Tôi đồng ý điều khoản
+    </label>
+    
+    <input type="submit" value="Gửi">
+</form>
+```
+-Lỗi 1: Dòng 75 - Input "Tên" không có <label for=""-> Vi phạm accessibility.
+Sửa: <label for="name">Tên:</label> <input type="text" id="name" name="name" required>.
+
+-Lỗi 2: Dòng 77 - Input "Email" không có label for=""-> Vi phạm accessibility.
+Sửa: <label for="email">Email:</label> <input type="email" id="email" name="email" required>.
+
+-Lỗi 3: Dòng 79 - Input "Mật khâu" không có label for=""-> Vi phạm accessibility.
+Sửa: <label for="password">Mật khẩu:</label> <input type="password" id="password" name="password" required>.
+
+-Lỗi 4: Dòng 80 - Input "Nhập lại mật khẩu" không có label for=""-> Vi phạm accessibility.
+Sửa: <label for="confirmpassword">Nhập lại mật khẩu:</label> <input type="password" id="confirmpassword" name="confirmpassword" required>.
+
+-Lỗi 5: Dòng 82 - Input "Phone" không có label for="", sử dụng value thay vì placeholder, type="text" thay vì type="tel"-> Vi phạm validation, accessibility, best practice.
+Sửa: <label for="phone">Phone:</label> <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>.
+
+-Lỗi 6: Dòng 84 - Select "Thành phố" không có label for="", Không có thuộc tính id và name-> Vi phạm accessibility + validation.
+Sửa: <label for="city">Thành phố:</label> <select id="city" name="city">.
+
+-Lỗi 7: Dòng 85 và 86 - option thiếu thuộc tính value -> vi phạm validation
+Sửa: <option value="hanoi">Hà Nội</option>.
+
+-Lỗi 8: Dòng 90 - lable không găn với input nào-> vi phạm accessibility.
+Sửa: <input type="checkbox" id="terms" name="terms"> <label for="terms">Tôi đồng ý điều khoản</label>
+
+-Lỗi 9: Dòng 93 - Input "Gửi" chưa tối ưu so với button-> Vi phạm Best pracetices.
+Sửa: <button type="submit">Gửi</button>.
+
+-Lỗi 10: Dòng 74 - Input không có thuộc tính action/methob-> vi phạm best practice.
+Sửa: <form action="/register" method="post">.
+
+Câu C2: Thiết kế chiến lược Validation
+```html
+<form action="#" method="POST">
+  <fieldset>
+    <legend>Đăng ký ngân hàng số</legend>
+
+    <label for="cccd">CCCD:</label>
+    <input type="text" name="cccd" id="cccd" pattern="[0-9]{12}" maxlength="12" placeholder="Nhập CCCD với đúng 12 số." required>
+
+    <label for="accountNumber">Số tài khoản</label>
+    <input type="text" name="accountNumber" id="accountNumber" pattern="[0-9]{10,15}" maxlength="15" placeholder="Nhập số tài khoản với 10-15 số" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="kien@gmail.com" autocomplete="email">
+
+    <label for="pin">PIN:</label>
+    <input type="password" id="pin" name="pin" pattern="[0-9]{6}" required>
+  </fieldset>
+</form>
+```
+Trả lời câu hỏi:
+1.Viết pattern regex cho CMND/CCCD và Số tài khoản.
+Pattern của CMND/CCCD: pattern="[0-9]{12}"
+pattern của Số tài khoản: pattern="[0-9]{10,15}"
+2.Giải thích: HTML5 validation đủ an toàn cho ứng dụng ngân hàng chưa? Tại sao?
+-Html5 validation chưa thể mang đến sự an toàn cho cho ngân hàng. Vì html5 chỉ đáp ứng được trong 3 tiêu chí cần có là client validation mà hoàn toàn không đả động gì đến server validation và database validation. Trong khi đó, html validation chỉ kiểm tra dữ liệu đúng không và cho phép submit. Các tin tặc có thể thực hiện các cuộc tấn công mà không cần đả động gì đến nó.
+
+3.Liệt kê 3 loại validation mà HTML5 KHÔNG THỂ làm được (phải dùng JavaScript):
+-So sánh giữa 2 field.
+-Real-time feedback.
+-Async / gọi API.
+
+4.Nêu 2 rủi ro bảo mật nếu chỉ validate trên Frontend mà không validate Backend
+- SQL Injection.
+- XSS (Cross-Site Scripting).

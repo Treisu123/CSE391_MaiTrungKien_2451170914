@@ -10,5 +10,5 @@ PBT-01
 -22/4/2026:Hoàn thành A1:So sánh figure và img.
 -22/4/2026:Hoàn thành B1:Form Đăng ký Tài khoản.
 -22/4/2026:Hoàn thành B2:Trang Multimedia
-
-
+-22/4/2026:Hoàn thành B3:Form Đặt hàng hoàn chỉnh.
+-25/4/2026:Hoàn thành C1:Thiết kế chiến lược Validation.
