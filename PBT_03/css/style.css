@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: aliceblue;
+    color: black;
+    line-height: 2;
+}
+
+header
+{
+    background: linear-gradient(to right, rgb(255, 13, 0), rgb(248, 248, 248));
+    color: white;
+    padding: 20px;
+}
+
+#Menu ul > li a
+{
+    text-decoration: none;
+    color: black;
+    background-color: blue;
+}
+
+#Menu ul > li a:hover
+{
+    background-color: white;
+    text-decoration:underline;
+}
+
+#Menu ul > li a.active
+{
+    color: #ff0000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#Skill .Table
+{
+    border-collapse: collapse;
+}
+
+#Skill .Table th,
+#Skill .Table td
+{
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#Skill .Table thead th 
+{
+    background-color: #4a4a4a;
+    color: #fff;
+}
+
+#Skill .Table tbody tr:nth-child(even) 
+{
+    background-color: #a4a2a2;
+}
+
+#Skill .Table tbody tr:hover
+{
+    background-color: #d0eaff;
+}
+
+.Footer
+{
+    background-color: orange;
+    color:azure;
+    text-align: center;
+}
