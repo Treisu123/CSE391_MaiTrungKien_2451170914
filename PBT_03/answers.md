@@ -119,5 +119,170 @@ header{}
 #Menu ul > li a.active {}       
 #Skill .Table tbody tr:nth-child(even) {}
 #Skill .Table tbody tr:hover {}
+
+Phần B:
+
+Câu B2:
+
+Phần 1:
+- Hộp 1 (content-box): chiều rộng thực tế = 300px px (đo từ DevTools)
+
+- Hộp 2 (border-box): chiều rộng thực tế = 250px (đo từ DevTools)
+
+- Content-box chỉ bao quanh vùng nội dung nên khi đặt width thì phần padding và border được cộng thêm phần ngoài, còn border-box thì đặt bao quanh cả vùng nội dung, padding và border nên khi đặt width là đặt tính cả padding và border vào nó. 
+
+Phần 2:
+
+- Các ảnh sidebar1, content1, ads1 là các ảnh sử dụng border-box.
+
+- Các ảnh sidebar2, content2, ads2 là các ảnh không sử dụng border-box.
+
+Câu B3:
+/*1*/
+p{
+    color: blue;             /* Specificity: 0,0,1 */
+}
+
+/*2*/
+.text{
+    color: aqua;              /* Specificity: 0,1,0 */
+}
+
+/*3*/                           
+.highlight{
+    color: gold;     /* Specificity: 0,1,0 */
+} 
+
+/*4*/                           
+p.text{
+    color: royalblue;     /* Specificity: 0,1,1 */
+}  
+
+/*5*/                           
+.text.highlight{
+    color: black;     /* Specificity: 0,2,0 */
+}
+
+/*6*/                           
+#demo{
+    color: brown;     /* Specificity: 1,0,0 */
+}
+
+/*7*/                           
+#demo.text{
+    color: violet;     /* Specificity: 1,1,0 */
+}
+
+/*8*/                           
+#demo.highlight{
+    color: aquamarine;     /* Specificity: 1,1,0 */
+}
+
+/*9*/                           
+#demo.text.highlight{
+    color: green;     /* Specificity: 1,2,0 */
+}
+
+
+/*10*/                           
+p#demo.text.highlight{
+    color: rosybrown;     /* Specificity: 1,2,1 */
+}
+
+2.Element sẽ hiển thị màu hồng nâu. Vì màu này có specificity score cao nhất.
+
+3.Ảnh BT-B3
+
+4.Trong hầu hết trường hợp sẽ thay đổi kết quả. Vì:
++ Không đổi kết quả: Sẽ ưu tiên đến specificity cao nhất trong cùng một origin với trường hợp các role khác điểm specificity.
+
++ Có đổi: Các rule có cùng mức độ specificity ở mức cao nhất lúc đó role nào được viết sau cùng sẽ thắng.
+
 Phần C:
 Câu C1:
+1. Tính chiều rộng thực tế của sidebar và content (content-box!)
+- Chiều rộng thực tế của sidebar: 342px
+- Chiều rộng thực tế của content: 722px
+
+2. Layout bị vỡ do: Tổng kích thước là 1064px lớn hơn 960px của container nên làm cho dòng thừa bị đẩy xuống làm vỡ layout.
+
+3.Đưa ra 2 cách sửa khác nhau (1 cách dùng border-box, 1 cách không dùng)
+- Cách 1: Dùng border-box.
+```html
+*{
+    box-sizing:border-box;
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+}
+.content {
+    width: 660px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+}
+```
+
+- Cách 2: Không sử dung border-box(Trừ padding, border ra khỏi width):
+```html
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+.sidebar {
+    width: 258px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+}
+.content {
+    width: 598px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+}
+```
+
+Câu C2: Cascade Puzzle.
+1. "Sản phẩm A" có font-size = 20px và color = green.
+```html
+body { font-size: 16px; color: #333; }
+.card .title { font-size: 20px }            /* specificity (0,2,0) */
+.container { font-size: 14px; }             /* specificity (0,1,0) */
+.card { color: blue; }                      /* specificity (0,1,0) */ 
+.highlight { color: green !important; }      /* specificity (0,1,0) + !important*/ 
+-> font-size có .card .title thắng do có specificity score (0,2,0) cao nhất và color có .highlight thắng do có !inportant.
+```
+
+2. "Mô tả sản phẩm" (p trong card featured) có color = blue.
+```html
+body { color: #333; }             /* specificity (0,0,1) */
+.card { color: blue; }              /* specificity (0,1,0) */
+.card p { color: inherit; }         /* specificity (0,1,1) */
+```
+.card p specificity (0,1,1) cao nhất -> thắng và giá trị là inherit -> leo lên cha .card { color: blue } -> color = blue
+
+3. "Sản phẩm B" (h2) có font-size = 20px và color = blue.
+```html
+body { font-size: 16px; }           /* specificity (0,0,1) */
+.container { font-size: 14px; }     /* specificity (0,1,0) */
+.card .title { font-size: 20px; }   /* specificity (0,2,0) */
+body { color: #333; }             /* specificity (0,0,1) */
+.card { color: blue; }              /* specificity (0,1,0) */
+.card .title { font-size: 20px; }   /* specificity (0,2,0) */
+```
+font-size: .card .title (0,2,0) cao nhất → thắng -> font-size = 20px và color: không rule nào set color trực tiếp -> kế thừa từ .card { color: blue } -> color = blue
+
+4. "Mô tả sản phẩm B" (p.highlight) có color = green.
+```html
+.card p { color: inherit; }                 /* specificity (0,1,1)*/
+.highlight { color: green !important; }     /* specificity (0,1,0) + !important*/
+```
+.card p specificity (0,1,1) cao hơn .highlight (0,1,0) — bình thường sẽ thắng nhưng .highlight có !important → thắng mọi specificity → color = green.

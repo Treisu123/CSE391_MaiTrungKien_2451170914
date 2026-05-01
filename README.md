@@ -22,3 +22,8 @@ PBT-03
 - 27/04/2026:Hoàn thành A3: Box Model — Tính toán kích thước.
 - 27/04/2026:Hoàn thành A4:Specificity (Độ ưu tiên).
 - 28/04/2026:Hoàn thành B1:Style trang Profile.
+- 30/04/2026:Hoàn thành B2:Box Model Lab.
+- 01/05/2026:Hoàn thành B3:Specificity Battle.
+- 01/05/2026:Hoàn thành C1:Debug CSS Layout.
+- 01/05/2026:Hoàn thành C2:Cascade Puzzle.
+

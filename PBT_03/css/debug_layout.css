@@ -1,0 +1,38 @@
+/*Cách 1*/
+.container1 {
+    width: 960px;
+    margin: 0 auto;
+}
+.container1 .sidebar {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+}
+.container1 .content {
+    box-sizing: border-box;
+    width: 660px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+/*Cách 2*/
+.container2 {
+    width: 960px;
+    margin: 0 auto;
+}
+.container2 .sidebar {
+    width: 258px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+}
+.container2 .content {
+    width: 598px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+}
+

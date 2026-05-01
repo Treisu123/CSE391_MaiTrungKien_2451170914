@@ -1,0 +1,50 @@
+/*1*/
+p{
+    color: blue;             /* Specificity: 0,0,1 */
+}
+
+/*2*/
+.text{
+    color: aqua;              /* Specificity: 0,1,0 */
+}
+
+/*3*/                           
+.highlight{
+    color: gold;     /* Specificity: 0,1,0 */
+} 
+
+/*4*/                           
+p.text{
+    color: royalblue;     /* Specificity: 0,1,1 */
+}  
+
+/*5*/                           
+.text.highlight{
+    color: black;     /* Specificity: 0,2,0 */
+}
+
+/*6*/                           
+#demo{
+    color: brown;     /* Specificity: 1,0,0 */
+}
+
+/*7*/                           
+#demo.text{
+    color: violet;     /* Specificity: 1,1,0 */
+}
+
+/*8*/                           
+#demo.highlight{
+    color: aquamarine;     /* Specificity: 1,1,0 */
+}
+
+/*9*/                           
+#demo.text.highlight{
+    color: green;     /* Specificity: 1,2,0 */
+}
+
+
+/*10*/                           
+p#demo.text.highlight{
+    color: rosybrown;     /* Specificity: 1,2,1 */
+}
