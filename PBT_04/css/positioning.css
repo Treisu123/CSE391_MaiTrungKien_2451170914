@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+.container .header
+{
+    position:fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: tomato;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.container .header .nav ul
+{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.container .header .nav a
+{
+    text-decoration: none;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.container .page {
+    display: flex;
+    margin-top: 60px;
+}
+
+.container .page .siderbar
+{
+    position: sticky;
+    width: 250px;
+    top: 80px;
+    align-self: flex-start;
+}
+
+.container .page .siderbar ul
+{
+    list-style: none;
+}
+
+.product-card
+{
+    position: relative;
+}
+
+.product-card .badge-hot
+{
+    position: absolute;
+    top: 0;
+    right: 0;  
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    background-color: red;
+    color: white;
+}
+
+.scroll-top
+{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    bottom: 100px;
+    right: 20px;
+}
