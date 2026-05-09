@@ -27,3 +27,13 @@ PBT-03
 - 01/05/2026:Hoàn thành C1:Debug CSS Layout.
 - 01/05/2026:Hoàn thành C2:Cascade Puzzle.
 
+PBT-04
+5/9/2026:Hoàn thành A1:5 Loại Positioning.
+5/9/2026:Hoàn thành A2:Flexbox vs Grid.
+5/9/2026:Hoàn thành B1:Positioning Playground.
+5/9/2026:Hoàn thành B2:Flexbox Navigation & Cards.
+5/9/2026:Hoàn thành B3:Grid Layout — Trang E-Commerce.
+5/9/2026:Hoàn thành C1:Flexbox vs Grid: Khi nào dùng gì?.
+5/9/2026:Hoàn thành C2:Debug Flexbox.
+
+
