@@ -36,4 +36,7 @@ PBT-04
 5/9/2026:Hoàn thành C1:Flexbox vs Grid: Khi nào dùng gì?.
 5/9/2026:Hoàn thành C2:Debug Flexbox.
 
-
+PBT-05
+5/9/2026:Hoàn thành A1:Viewport & Mobile-First.
+5/9/2026:Hoàn thành A2:Breakpoints.
+5/9/2026:Hoàn thành A3:Media Queries.
