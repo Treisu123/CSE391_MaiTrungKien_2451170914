@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+}
+
+.header 
+{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    align-items: center
+}
+
+.header .nav ul
+{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+.header .nav ul > li
+{
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: aqua;
+}
+
+.header .nav ul > li a
+{
+    text-decoration: none;
+}
+
+.header .nav ul > li a:hover
+{
+    text-decoration: underline;
+}
+
+.header .login-ground ul 
+{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+.header .login-ground ul > li
+{
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: aqua;
+}
+
+.header .login-ground ul > li a
+{
+    text-decoration: none;
+}
+
+.header .login-ground ul > li a:hover
+{
+    text-decoration: underline;
+}
+
+.main {
+    display: grid;
+    margin-top: 100px;
+    grid-template-areas:
+        "hero hero hero"
+        "sidebar content ads";
+    grid-template-columns:
+        minmax(180px, 200px)
+        minmax(300px, 1fr)
+        minmax(180px, 200px);
+    gap: 20px;
+
+}
+
+.hero-banner
+{
+    grid-column: 1 / 4;
+    text-align: center;
+}
+
+.header,
+.hero-banner,
+.footer
+{
+    grid-column: 1 / -1;
+}
+
+.main-content
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    width: 100%;
+    gap: 24px;
+    align-items: stretch; 
+}
+
+.main-content .card img
+{
+    width: 100%;
+    height: 250px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.card .btn-buy {
+    padding: 10px;
+    margin-top: auto;       
+}
+
+.btn-buy:hover
+{
+    background-color: #ff2e2e;
+    
+}
+
+.hero-banner {
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main-content {
+    grid-area: content;
+}
+
+.ads {
+    grid-area: ads;
+}
+
+.featured-card {
+    grid-column: span 2;
+}
