@@ -73,3 +73,164 @@ Câu A3:Media Queries
 | 1400px | 1140px    |
 
 Câu A4:SCSS Basics.
+1. Variables — "Sửa 1 chỗ, tất cả tự đổi".
+$color-primary:     #7c3aed;
+$color-primary-dark: darken($color-primary, 10%);   
+$color-danger:      #dc2626;
+$color-success:     #16a34a;
+$color-text:        #1e293b;
+$color-bg:          #f8fafc;
+
+$font-family-base:  'Inter', sans-serif;
+$font-size-base:    16px;
+$font-size-sm:      14px;
+$font-size-lg:      18px;
+
+$space-1: 4px;
+$space-2: 8px;
+$space-4: 16px;
+$space-6: 24px;
+
+$radius-sm:   6px;
+$radius-md:   12px;
+$radius-full: 9999px;
+
+$transition-base: 0.3s ease;
+
+.btn-primary
+{
+    background: $primary-color;
+    color: $color-text;
+    border-radius: $radious-sm;
+}
+
+2. Nesting — CSS theo cấu trúc HTML
+.navbar
+{
+    backround: #1a202c;
+    padding: $space-4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        color: white;
+        font-size: $font-size-lg;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    &__links {
+        display: flex;
+        gap: $space-6;
+        list-style: none;
+    }
+}
+
+3. Mixins — "Hàm CSS tái sử dụng".
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin button-style($bg, $color: white, $hover-bg: null) {
+    background: $bg;
+    color: $color;
+    padding: $space-3 $space-6;
+    border: none;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background $transition-base, transform $transition-base;
+
+    &:hover {
+        background: if($hover-bg, $hover-bg, darken($bg, 10%));
+        transform: translateY(-2px);
+    }
+
+    &:active { transform: translateY(0); }
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (max-width: 576px) { @content; }
+    } @else if $breakpoint == tablet {
+        @media (min-width: 768px) { @content; }
+    } @else if $breakpoint == desktop {
+        @media (min-width: 1024px) { @content; }
+    }
+}
+
+.btn-primary {
+    @include button-style($color-primary);
+}
+
+.btn-danger {
+    @include button-style($color-danger);
+}
+
+.modal {
+    @include flex-center;
+    position: fixed;
+    inset: 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include respond-to(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+4. Partials & Import — "Chia file gọn gàng".
+styles/
+├── base/
+│   ├── _variables.scss      
+│   ├── _reset.scss          
+│   └── _typography.scss   
+│
+├── mixins/
+│   ├── _flexbox.scss        
+│   ├── _responsive.scss    
+│   └── _buttons.scss       
+│
+├── components/
+│   ├── _navbar.scss
+│   ├── _card.scss
+│   ├── _button.scss
+│   ├── _form.scss
+│   └── _modal.scss
+│
+└── main.scss                
+
+- Vì scss là ngôn ngữ mở rộng chạy phía build nên cần phải biên dịch thành css trước khi trình duyệt có thể đọc.
+-Các cách để có thể biên dịch từ scss->css:
+1. VS Code + Live Sass Compiler extension
+   → Click "Watch Sass" ở status bar
+   → Tự compile mỗi khi save
+
+2. Vite (React/Vue project):
+   npm install -D sass
+   → Vite tự detect và compile .scss files
+
+3. Node.js script:
+   npm install -D sass
+   npx sass styles/main.scss styles/main.css --watch
+
+4. Create React App:
+   npm install sass
+   → Đổi .css thành .scss → tự compile
+

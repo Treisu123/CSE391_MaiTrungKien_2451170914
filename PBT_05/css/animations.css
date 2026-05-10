@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-buy {
+    transition: all 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #ff2e2e;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    transition: all 0.3s ease
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    border: 8px solid #eee;
+    border-top-color: #0d6efd;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fate-in {
+    animation: fateIn 0.6s ease forwards;
+}
