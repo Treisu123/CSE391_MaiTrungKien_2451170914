@@ -42,3 +42,6 @@ PBT-05
 9/5/2026:Hoàn thành A3:Media Queries.
 10/5/2026:Hoàn thành B1:Responsive Product Page.
 10/5/2026:Hoàn thành B2:CSS Transitions & Animations.
+10/5/2026:Hoàn thành B3:SCSS Refactor.
+10/5/2026:Hoàn thành C1:Phân tích trang web thực.
+10/5/2026:Hoàn thành C2:Thiết kế Responsive Strategy.
