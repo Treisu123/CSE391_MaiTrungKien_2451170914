@@ -117,3 +117,16 @@ Trong flexbox có flex-shrink: 1 làm cho siderbar bị co lại khi nội dung 
     flex: 1; 
 }
 ```
+
+Phần C:
+Câu C1:
+- Navigation thay đổi:
++ Mobile: Hamburger góc trái và sau nó là logo. Bên phải có biểu hiện hình người bị cắt đi chữ đăng nhâp va hình chuông. Nav chính ẩn hoàn toàn. Chỉ hiện danh mục hiện tại và thanh cuộn.
++ Tablet: Hamburger góc trái và sau nó là logo. Bên phải có biểu hiện hình người bị cắt đi chữ đăng nhâp, hình chuông và phần mới nhất|international. Nav hiện một phần và nó dấu -> để xem toàn bộ thẻ điều hướng.
++ Desktop: Ẩn đi hamburger. Bên trái hiện logo và ngày. Bên phải hiện biểu tượng hình người với chữ đăng nhập và hình chuông, sau nó là mới nhất|theo khu vực|international. Hiển thị toàn bộ thanh điều hướng.
+- Lưới content: 
++ Mobile: 1 Cột.
++ Tablet: 1-2 cột.
++ Desktop: 3-4 cột
+- Element bị ẩn trên mobile: Toàn bộ nav ngang ẩn. "Mới nhất","Theo khu vực", "International", "Đăng nhập" ẩn. Ngày tháng ẩn.
+- Font size: Cỡ chữ có sự thay đổi khi ở mobile so với 2 kiểu còn lại.
