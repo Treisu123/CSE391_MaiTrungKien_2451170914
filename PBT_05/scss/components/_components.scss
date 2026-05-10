@@ -1,0 +1,45 @@
+.nav {
+    ul {
+        li a {
+            &:hover { 
+                background: #f7f7f7; 
+            }
+            &.active { 
+                color: $primary-color; 
+            }
+        }
+    }
+}
+
+.card {
+    img { 
+        height: 220px; 
+        object-fit: cover; 
+    }
+    .card-info { 
+        padding: 12px; 
+    }
+    .btn-buy { 
+        background: $color-accent; 
+        &:hover { 
+            background: #ff2e2e; 
+        } 
+    }
+    &:hover {
+        transform: translateY(-5px); 
+    }
+    &.featured { 
+        grid-column: span 2; 
+    }
+}
+
+.menu-toggle {
+    &:checked ~ .nav {
+        display: block; 
+    }
+    &:checked ~ .btn-hamburger {
+        .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .bar:nth-child(2) { opacity: 0; }
+    }
+}
+

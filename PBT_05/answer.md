@@ -234,6 +234,28 @@ styles/
    npm install sass
    → Đổi .css thành .scss → tự compile
 
+Phần B:
+Câu B3: Lệnh compile scss -> css.
+- Dùng live scss compiler:
++ cài extension live scss compile.
++ Click vào watch scss.
++ Thư mục main.css tự động được sinh ra trong thư mục scss.
+
+- Dùng terminal:
+```bash
+Cài Sass
+npm install -g sass
+
+Compile một lần
+sass scss/main.scss scss/main.css
+
+Tự động compile khi lưu file
+sass --watch scss/main.scss:scss/main.css
+```
+- Kết quả
++ Input:  `scss/main.scss`
++ Output: `scss/main.css`
+
 Phần C:
 Câu C1:
 - Navigation thay đổi:
