@@ -268,3 +268,36 @@ Câu C1:
 + Desktop: 3-4 cột
 - Element bị ẩn trên mobile: Toàn bộ nav ngang ẩn. "Mới nhất","Theo khu vực", "International", "Đăng nhập" ẩn. Ngày tháng ẩn.
 - Font size: Cỡ chữ có sự thay đổi khi ở mobile so với 2 kiểu còn lại.
+
+Câu C2:Thiết kế Responsive Strategy.
+- Mobile:
++ Ẩn ở mobile: sidebar, cột bên, map không có sticky — cuộn xuống mới thấy.
++ Grid ảnh: 2 cột đều nhau.
++ Form: full-width, nằm sau grid ảnh, trước bản đồ.
+
+- Tablet:
++ Grid ảnh: 3 cột.
++ Bản đồ: đặt song song với form, layout 2 cột 50/50.
++ Nav: hamburger menu thay vì full nav links.
+
+- Desktop:
++ Layout: 12-column grid, max-width 1280px, centered
++ Grid ảnh: 6 cột 1 hàng.
++ Sidebar: không có sidebar chứa nội dung phụ — thay vào đó form (1/3) + map (2/3) đặt cạnh nhau.
++ Form desktop: 2 cột bên trong (ngày & giờ song song, số người & tên song song).
+
+/* Mobile-first base */
+.food-grid { grid-template-columns: repeat(2, 1fr); }
+.booking-section { grid-template-columns: 1fr; }
+
+/* Tablet 768px+ */
+@media (min-width: 768px) {
+  .food-grid { grid-template-columns: repeat(3, 1fr); }
+  .booking-section { grid-template-columns: 1fr 1fr; }
+}
+
+/* Desktop 1024px+ */
+@media (min-width: 1024px) {
+  .food-grid { grid-template-columns: repeat(6, 1fr); }
+  .booking-section { grid-template-columns: 1fr 2fr; }
+}
