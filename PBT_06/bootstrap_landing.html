@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://salt.tikicdn.com/ts/upload/0e/07/78/ee828743c9afa9792cf20d75995e134e.png"
+                        alt="Logo tiki">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sản phẩm</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                    <a href="#" class="btn btn-outline-secondary ms-2 position-relative">
+                        <i class="bi bi-cart3"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mb-4">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="https://salt.tikicdn.com/cache/w750/ts/tikimsp/ff/1b/5c/62e48c29e3a01593b2a4fde759a37ff1.jpg.webp"
+                            class="d-block w-100" alt="premium-banner-0">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Sale 11.11 — Giảm đến 50%</h5>
+                            <p class="d-none d-md-block">Hàng ngàn sản phẩm ưu đãi chỉ trong hôm nay</p>
+                            <a href="#" class="btn btn-danger btn-sm mt-1">Mua ngay</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://salt.tikicdn.com/cache/w750/ts/tikimsp/ff/1b/5c/62e48c29e3a01593b2a4fde759a37ff1.jpg.webp"
+                            class="d-block w-100" alt="premium-banner-0">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Điện thoại flagship mới nhất</h5>
+                            <p class="d-none d-md-block">iPhone, Samsung, Xiaomi — giao hàng ngay</p>
+                            <a href="#" class="btn btn-primary btn-sm mt-1">Khám phá</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2025/6/12/freeship-0d-moi-don1-1749734147224481296412-5-31-567-1104-crop-17497344065821314984456.jpg"
+                            class="d-block w-100" alt="premium-banner-0">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Freeship toàn quốc cuối tuần</h5>
+                            <p class="d-none d-md-block">Áp dụng cho đơn hàng từ 99.000đ</p>
+                            <a href="#" class="btn btn-success btn-sm mt-1">Xem ưu đãi</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <div class="container my-4">
+            <div class="row">
+
+                <aside class="col-lg-3 d-none d-lg-block">
+                    <div class="list-group">
+
+                        <a href="#" class="list-group-item list-group-item-action active">
+                            Điện thoại
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Laptop
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Tai nghe
+                        </a>
+                    </div>
+                </aside>
+
+                <section class="col-12 col-lg-9">
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card h-100 position-relative">
+                                <span class="badge bg-danger position-absolute end-0 top-0 m-2">Sale</span>
+                                <img src="https://tse1.mm.bing.net/th/id/OIP.iESOegxbfi3movbkZc5vfQHaHa?pid=Api&h=220&P=0"
+                                    class="card-img-top" alt="Tai nghe Bluetooth Chụp Tai Sony WH-CH720N">
+                                <div class="card-body">
+                                    <h3 class="card-title">Tai nghe Sony</h3>
+                                    <p class="card-text">1.200.000₫</p>
+                                    <button type="button" class="btn w-100 btn-primary">Mua ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card h-100 position-relative">
+                                <span class="badge bg-danger position-absolute end-0 top-0 m-2">Sale</span>
+                                <img src="https://cf.shopee.vn/file/sg-11134201-22100-ipwk94un17iv7b"
+                                    class="card-img-top" alt="Bàn Phím Cơ Máy Tính K2 Pro Led Cực Đẹp">
+                                <div class="card-body">
+                                    <h3 class="card-title">Bàn phím cơ</h3>
+                                    <p class="card-text">850.000₫</p>
+                                    <button type="button" class="btn w-100 btn-primary">Mua ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card h-100 position-relative">
+                                <span class="badge bg-danger position-absolute start-0 top-0 m-2">Sale</span>
+                                <img src="https://tse1.mm.bing.net/th/id/OIP.smsGyjxRgtVTB05skV8FhAHaHa?pid=Api&h=220&P=0"
+                                    class="card-img-top"
+                                    alt="Chuột không dây Logitech B175 nổi bật tiện ích, giá thành rẻ – Ben Computer">
+                                <div class="card-body">
+                                    <h3 class="card-title">Chuột không dây</h3>
+                                    <p class="card-text">450.000₫</p>
+                                    <button type="button" class="btn w-100 btn-primary">Mua ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card h-100 position-relative">
+                                <span class="badge bg-danger position-absolute end-0 top-0 m-2">Sale</span>
+                                <img src="https://phucanhcdn.com/media/lib/31169_ManhinhDellU2415-1.jpg"
+                                    class="card-img-top" alt="Màn hình Dell U2415 24 inch UltraSharp IPS - Chính Hãng">
+                                <div class="card-body">
+                                    <h3 class="card-title">Màn hình 24"</h3>
+                                    <p class="card-text">3.500.000₫</p>
+                                    <button type="button" class="btn w-100 btn-primary">Mua ngay</button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm"
+                                        data-bs-toggle="modal" data-bs-target="#modalManHinh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5>Về chúng tôi</h5>
+                    <p>
+                        Shop chuyên thiết bị công nghệ chính hãng,
+                        giá tốt toàn quốc.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5>Danh mục</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Điện thoại</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Laptop</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Tai nghe</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5>Hỗ trợ</h5>
+
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Chính sách</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Bảo hành</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5>Kết nối</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">
+                © 2026 Shop công nghệ.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal Tai nghe -->
+    <div class="modal fade" id="modalTaiNghe" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tai nghe Sony WH-CH720N</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body d-flex gap-3">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.iESOegxbfi3movbkZc5vfQHaHa?pid=Api&h=220&P=0"
+                        class="rounded" width="120" height="120" style="object-fit:cover" alt="Tai nghe Sony">
+                    <div>
+                        <p class="text-danger fw-bold fs-5 mb-1">1.200.000₫</p>
+                        <del class="text-muted small">1.800.000₫</del>
+                        <span class="badge bg-danger ms-1">-33%</span>
+                        <p class="mt-2 small">Chống ồn chủ động, pin 35 giờ, Bluetooth 5.2. Bảo hành 12 tháng.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-primary"><i class="bi bi-cart3"></i> Thêm giỏ hàng</button>
+                    <button class="btn btn-primary">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Bàn phím -->
+    <div class="modal fade" id="modalBanPhim" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bàn phím cơ K2 Pro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body d-flex gap-3">
+                    <img src="https://cf.shopee.vn/file/sg-11134201-22100-ipwk94un17iv7b" class="rounded" width="120"
+                        height="120" style="object-fit:cover" alt="Bàn phím cơ">
+                    <div>
+                        <p class="text-danger fw-bold fs-5 mb-1">850.000₫</p>
+                        <del class="text-muted small">1.200.000₫</del>
+                        <span class="badge bg-danger ms-1">-29%</span>
+                        <p class="mt-2 small">LED RGB, switch Blue, layout TKL. Bảo hành 12 tháng.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-primary"><i class="bi bi-cart3"></i> Thêm giỏ hàng</button>
+                    <button class="btn btn-primary">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Chuột -->
+    <div class="modal fade" id="modalChuot" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chuột không dây Logitech B175</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body d-flex gap-3">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.smsGyjxRgtVTB05skV8FhAHaHa?pid=Api&h=220&P=0"
+                        class="rounded" width="120" height="120" style="object-fit:cover" alt="Chuột không dây">
+                    <div>
+                        <p class="text-danger fw-bold fs-5 mb-1">450.000₫</p>
+                        <del class="text-muted small">600.000₫</del>
+                        <span class="badge bg-danger ms-1">-25%</span>
+                        <p class="mt-2 small">Kết nối USB nano, pin AA dùng 12 tháng, DPI 1000. Bảo hành 12 tháng.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-primary"><i class="bi bi-cart3"></i> Thêm giỏ hàng</button>
+                    <button class="btn btn-primary">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Màn hình -->
+    <div class="modal fade" id="modalManHinh" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Màn hình Dell U2415 24"</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body d-flex gap-3">
+                    <img src="https://phucanhcdn.com/media/lib/31169_ManhinhDellU2415-1.jpg" class="rounded" width="120"
+                        height="120" style="object-fit:cover" alt="Màn hình Dell">
+                    <div>
+                        <p class="text-danger fw-bold fs-5 mb-1">3.500.000₫</p>
+                        <del class="text-muted small">4.500.000₫</del>
+                        <span class="badge bg-danger ms-1">-22%</span>
+                        <p class="mt-2 small">IPS 24 inch, độ phân giải 1920x1200, cổng HDMI/DP/USB. Bảo hành 36 tháng.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-primary"><i class="bi bi-cart3"></i> Thêm giỏ hàng</button>
+                    <button class="btn btn-primary">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
