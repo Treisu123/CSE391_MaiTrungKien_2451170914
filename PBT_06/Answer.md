@@ -82,3 +82,25 @@ $primary:   #e63946;
 2. Tại sao KHÔNG nên override trực tiếp .btn-primary { background: red; } mà nên dùng SASS variables.
 - Vì nếu bạn viêt override trực tiếp .btn-primary { background: red; } nó chỉ đổi màu chỗ mà bạn chỉnh sửa mà không đổi màu toàn bộ dẫn đến mất đồng bộ và vì thế để đồng bộ bạn phải sửa chay toàn bộ gây mất thời gian và khó khăn vì vậy nên dùng đến SASS variables.
 
+Câu C2: So sánh.
+Viết CSS thuần (từ PBT trước) để tạo 1 navbar responsive + 1 product card. So sánh với Bootstrap version:
+- Số dòng CSS cần viết: 
++ CSS thuần: 400 dòng.
++ Bootstrap: 0-20 dòng (chỉ custum thêm)
+- Thời gian phát triển:
++ CSS thuần: 3-5 tiếng.
++ Bootstrap: 30-40 phút.
+- Khả năng tùy biến:
++ CSS thuần: tùy biến tuyệt đối viết những gì mình muốn.
++ Bootstrap: đã được thiết kế từ trước, muốn theo ý mình phải override liên tục và bị ràng buộc bởi hệ thống thiết kế của bootstrap.
+- Khi nào NÊN và KHÔNG NÊN dùng Bootstrap?
++ Nên sử dụng bootstrap:
+-- Dashboard nội bộ, admin panel, tool nội bộ công ty — không cần brand riêng.
+-- Prototype / MVP cần ra nhanh để demo hoặc test ý tưởng.
+-- Team ít người, không có designer, cần UI ổn ngay.
+-- Project không cần identity thương hiệu mạnh.
++ Không nên sử dụng bootstrap:
+-- Landing page / website thương hiệu — cần trông khác biệt, không phải "Bootstrap mặc định".
+-- Project có Design System riêng từ designer — Bootstrap sẽ cản trở nhiều hơn giúp.
+-- Cần performance cao — Bootstrap load ~30KB CSS dù chỉ dùng 20% tính năng.
+-- Muốn học CSS thật sự — dùng Bootstrap sớm quá sẽ không hiểu cơ chế bên dưới.
