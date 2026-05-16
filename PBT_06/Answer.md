@@ -45,3 +45,40 @@ Câu A2: Utilities & Components.
 - .container-fluid: Width sẽ luôn là 100% với các loại breakpoint khác nhau.
 - .container-md: Khi kích thước màn nhỏ hơn kích thước tablet nó hoạt động như một container-fluid, khi kích thước lớn hơn kích thước tablet nó sẽ hoạt động như một container.
 
+Phần C: Phân tích.
+Câu C1:Tùy biến Bootstrap.
+1. Đổi màu $primary từ xanh mặc định sang #E63946
+- Công cụ: 
++ Một công cụ viết code bất kỳ(vs code...).
++ sass.
++ Node.js + npm
+- modify file:
+// src/custom.scss
+
+// ===== STEP 1: Required imports (bắt buộc) =====
+@import "bootstrap/scss/functions";
+
+// ===== STEP 2: Override variables TRƯỚC bootstrap =====
+
+// --- Colors ---
+$primary:   #e63946;
+
+// ===== STEP 3: Required Bootstrap imports =====
+@import "bootstrap/scss/variables";
+
+// ===== STEP 4: Import Bootstrap components =====
+@import "bootstrap/scss/bootstrap";
+
+
+// ===== STEP 5: Your custom CSS sau Bootstrap =====
+// (Thêm styles riêng ở đây)
+
+
+- Quy trình:
++ npm install bootstrap@5.3.0 sass
++ npm run sass:build
++ npm run sass:watch
+
+2. Tại sao KHÔNG nên override trực tiếp .btn-primary { background: red; } mà nên dùng SASS variables.
+- Vì nếu bạn viêt override trực tiếp .btn-primary { background: red; } nó chỉ đổi màu chỗ mà bạn chỉnh sửa mà không đổi màu toàn bộ dẫn đến mất đồng bộ và vì thế để đồng bộ bạn phải sửa chay toàn bộ gây mất thời gian và khó khăn vì vậy nên dùng đến SASS variables.
+
